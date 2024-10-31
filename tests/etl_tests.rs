@@ -21,9 +21,13 @@ fn test_transform_load() {
 
 #[test]
 fn test_query() {
-    // Execute a SELECT query on the new table
+    // Execute a SELECT query
     let select_query = "SELECT * FROM BirthData WHERE id = 1;";
     let result = query(select_query);
+
+    if let Err(e) = &result {
+        eprintln!("Query Error: {:?}", e);
+    }
 
     assert!(result.is_ok());
 }
