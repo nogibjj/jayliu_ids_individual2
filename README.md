@@ -6,8 +6,7 @@ This project is a command-line interface (CLI) tool developed in Rust that perfo
 The code leverages GitHub Copilot for initial suggestions and completions, and adapts Python-based logic to Rust for enhanced error handling and control over system resources.
 
 ## YouTube Video Link
-YouTube Link <!-- Replace with your actual video link after upload -->
-
+YouTube Link:https://youtu.be/xzBLZNNJ2r4
 ## Visualization of ETL Process
 ![etl](https://github.com/user-attachments/assets/8414b033-bc57-47e7-8586-e263a9010eff)
 
