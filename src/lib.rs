@@ -68,11 +68,11 @@ pub fn transform_load(dataset: &str) -> Result<String> {
         match result {
             Ok(record) => {
                 stmt.execute(&[
-                    &record[0],  // year
-                    &record[1],  // month
-                    &record[2],  // date_of_month
-                    &record[3],  // day_of_week
-                    &record[4],  // births
+                    &record[0], // year
+                    &record[1], // month
+                    &record[2], // date_of_month
+                    &record[3], // day_of_week
+                    &record[4], // births
                 ])?;
             }
             Err(err) => {
@@ -91,12 +91,12 @@ pub fn query(query: &str) -> Result<()> {
         let mut stmt = conn.prepare(query)?;
         let results = stmt.query_map(params![], |row| {
             Ok((
-                row.get::<usize, i32>(0)?,   // id
-                row.get::<usize, i32>(1)?,   // year
-                row.get::<usize, i32>(2)?,   // month
-                row.get::<usize, i32>(3)?,   // date_of_month
-                row.get::<usize, i32>(4)?,   // day_of_week
-                row.get::<usize, i32>(5)?,   // births
+                row.get::<usize, i32>(0)?, // id
+                row.get::<usize, i32>(1)?, // year
+                row.get::<usize, i32>(2)?, // month
+                row.get::<usize, i32>(3)?, // date_of_month
+                row.get::<usize, i32>(4)?, // day_of_week
+                row.get::<usize, i32>(5)?, // births
             ))
         })?;
 
